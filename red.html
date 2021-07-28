@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+      integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
+      crossorigin="anonymous"
+    />
+
+    <title>Document</title>
+</head>
+<body>
+    <i class="fas fa-heart like"></i>
+    <div>fdfd</div>
+    <i class="fas fa-trash remove"></i>
+    <div>
+      <button id="subtract" >-</button>
+      <input  type="number" value="0">
+      <button  id="add" >+</button>
+      </div>
+      <div>
+        <button id="subtract" >-</button>
+        <input  type="number" value="0">
+        <button  id="add" >+</button>
+        </div>
+            <div>
+      <button id="subtract" >-</button>
+      <input  type="number" value="0">
+      <button  id="add" >+</button>
+      </div>
+    <script>
+const hearts = Array.from(document.getElementsByClassName("like"));
+const removeBtns = Array.from(document.querySelectorAll(".remove"));
+
+function handleLike(event) {
+event.target.classList.toggle("red-heart");
+}
+      
+for (let i = 0; i < hearts.length; i++) {
+hearts[i].addEventListener("click", handleLike);
+}  
+//Remove Btn
+
+function removeProduct(event) {
+  event.target.parentElement.parentElement.remove();
+ 
+}
+
+for (let i = 0; i < removeBtns.length; i++) {
+  removeBtns[i].addEventListener("click", removeProduct);
+}
+//dddd
+var btnAdd=document.querySelector('#add')
+const btnSub=document.querySelector('#subtract')
+var input=document.querySelector('input')
+function moibtn() {
+  input.value = parseInt(input.value) - 1;
+}
+
+for (let i = 0; i < btnSub.length; i++) {
+  btnSub[i].addEventListener('click', moibtn())
+  
+}
+    </script>
+    <style>
+        .red-heart {
+  color: red;
+}
+
+
+    </style>
+</body>
+</html>

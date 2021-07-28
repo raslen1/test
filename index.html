@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="css.css">
+    <title>js check</title>
+</head>
+<body>
+    <div>
+        <h2>your cart</h2>
+    </div>
+
+    <div class="cart">
+        <h2>cancel</h2>
+        <h2>fav</h2>
+        <h2>picture</h2>
+        <div>
+        <h2>name of pack</h2> 
+        <p></p>
+        </div>
+        <div>
+        <h2>quantité</h2>
+        </div>
+        <h2>price</h2>
+    </div>
+ 
+    <div class="cart">
+        <button id="button_X" >X</button>
+        <i class="fas fa-heart coeur"></i>
+        <img src="c3.jpg" alt="Support phone">
+        <div>
+        <h2>Support phone</h2> 
+        <p>Support for all phone+light</p>
+        </div>
+        <div>
+        <button id="button_-" >-</button>
+        <input type="number" readonly>
+        <button id="button_+" >+</button>
+        </div>
+        <p>9.99$</p>
+    </div>    
+     
+    <div class="cart">
+        <button id="button_X" >X</button>
+        <i class="fas fa-heart coeur"></i>
+        <img src="f3.jpg" alt="femme 3am9a">
+        <div>
+        <h2>femme 3ami9a</h2> 
+        <p>pack l3ami9a+skate+album xxxtentation</p>
+        </div>
+        <div>
+        <button id="button_-" >-</button>
+        <input type="number" readonly>
+        <button id="button_+" >+</button>
+        </div>
+        <p>20.99$</p>
+    </div>    
+    <div class="cart">
+        <button id="button_X" >X</button>
+        <button id="coeur" onclick="change_red()">♥</button>
+        <img src="h3.jpg" alt="mwahar wild omi">
+        <div>
+        <h2>mwahar wild omi</h2> 
+        <p>tza9lima mte3 wled omi</p>
+        </div>
+        <div>
+        <button id="subtract" >-</button>
+        <input  type="number" value="0">
+        <button  id="add" >+</button>
+        </div>
+        <p>25.99$</p>
+    </div>
+    
+    <h5>♥</h5>
+   <script >
+       var btnAdd=document.querySelector('#add')
+var btnSub=document.querySelector('#subtract')
+var input=document.querySelector('input')
+
+btnAdd.addEventListener('click', () =>
+{
+    input.value = parseInt(input.value) + 1;
+ 
+});
+btnSub.addEventListener('click', () =>
+{
+    input.value = parseInt(input.value) - 1;
+ 
+});
+   </script> 
+</body>
+</html>
